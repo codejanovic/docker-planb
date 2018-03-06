@@ -25,7 +25,7 @@ The container may be configure by the following environment variables
 ## Run with `docker run`
 ```bash
 docker run --rm --name planb \
--e DESTINATION=/Users/codejanovic/Documents \
+-e DESTINATION=/some/destination/folder/on/your/host \
 -v /var/run/docker.sock:/var/run/docker.sock  \
 codejanovic/planb:develop
 ```
