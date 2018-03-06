@@ -1,0 +1,12 @@
+FROM golang:1.8
+WORKDIR /go/src/app
+
+ENV VOLUME_FILTER=.
+ENV DESTINATION=
+ENV DESTINATION_FOLDER_FORMAT=2006-01-02_15h-04m-05s
+ENV LOOMCHILD_IMAGE_VERSION=latest
+
+COPY . .
+RUN go get -d -v ./...
+RUN go install -v ./...
+CMD ["app"]
